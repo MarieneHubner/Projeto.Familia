@@ -1,0 +1,429 @@
+@charset "utf-8";
+
+@font-face{
+  font-family: Fonte;
+  src: url(Fonte/PetrovSans-Black.ttf);
+}
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+h3 {
+  font-size: 1.6em;
+  font-family: Fonte;
+}
+
+/*------------------Formatações Gerais-----------------*/
+
+/*---------------Header--------------------------------*/
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 3.5vw;
+  position: fixed;
+  width: 100vw;
+  z-index: 40;
+  background-color: rgb(255, 255, 255);
+}
+
+header .nav-left {
+  display: flex;
+  align-items: center;
+}
+
+header .nav-left img{
+  width: 100px;
+  height: 100px;
+  margin: -0.5% 0%;
+}
+
+header h3{
+  white-space: nowrap;
+}
+
+.nav-left h3 {
+  font-size: 2em;
+  font-family: Fonte;
+}
+
+header .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  margin-right: 8vw;
+}
+
+.nav-right a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: black;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.nav-left img{
+  margin: -7% 0%;
+  width: 150px;
+  height: 130px;
+}
+
+.nav-right a:hover {
+  color: #3d30a2;
+}
+
+.dropdown button {
+  background-color: #3d30a2;
+  border-color: #3d30a2;
+  font-size: 1.6em;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0% 11%;
+  border-radius: 100px;
+  padding-bottom: -5%;
+}
+
+.dropdown button:hover,
+.dropdown button:active {
+  background-color: #000;
+  border-color: #0000;
+  color: #ffffff;
+}
+
+.dropdown ul {
+  width: 120%;
+  border-radius: 10px;
+}
+
+.dropdown-menu li:nth-child(1) a {
+  color: #ed7d31;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(2) a {
+  color: #E73C35;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(3) a {
+  color: #1f4172;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(4) a {
+  color: #3d30a2;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(5) a {
+  color: #17594A;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(1) a:hover {
+  color: #ffffff;
+  background-color: #ed7d31;
+}
+
+.dropdown-menu li:nth-child(2) a:hover {
+  color: #ffffff;
+  background-color: #E73C35;
+}
+
+.dropdown-menu li:nth-child(3) a:hover {
+  color: #ffffff;
+  background-color: #1f4172;
+}
+
+.dropdown-menu li:nth-child(4) a:hover {
+  color: #ffffff;
+  background-color: #3d30a2;
+}
+.dropdown-menu li:nth-child(5) a:hover {
+  color: #ffffff;
+  background-color: #17594A;
+}
+
+/*---------------Header--------------------------------*/
+
+ /*--------------------Main(imagem inicial com sogan)-------------------------*/
+
+.containerMain{
+  background-image: url("fotos/parallax2.jfif");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /*!important (Nada irá sobrepor esse elemento, supera todos outros tipos de configuracao que o afetem)*/
+  height: 100vh !important; /*Nesse caso Nada será capaz de mudar a altura*/
+  width: 100vw;                /*"vh" viewport height (altura de visualização da tela)*/
+  overflow: hidden;
+  position: relative;
+  background-position: 50% 50%; /*50% vertical e 50% horizontal*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+;
+}
+
+.containerMain:after{
+    content: ""; /*Significa que essa section ficará vazia*/
+    top: 7.5vh; /*Modifique aqui para nao cobrir o cabecaho */
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1; /*Distancia entre o elemento e o plano de fundo (profundidade)*/                      
+    background-color: #3d30a23a; /*Efeito de sombra fade nas imagens (por causa do to bottom esse efeito é no final da imagem, se botar outras opções podemos fazer o efeito de sombra em outras partes da imagem)*/
+}
+
+
+.containerMain h1{
+  z-index: 2;
+  font-size: 5em;
+  color: #ffffff;
+  font-family: Fonte;
+}
+
+.containerMain a {
+  align-items: center;
+  z-index: 2;
+  font-size: 1.8em;
+  font-weight: 620;
+  text-decoration: none;
+  color: #3d30a2;
+  background-color: #fff;
+  align-self: center;
+  justify-self: center;
+  margin-top: 5vh;
+  padding: 0.5vh 3vw;
+  border-radius: 10px;
+  transition: .4s;
+}
+
+.containerMain a:hover{
+  transform: scale(1.01, 1.01);
+  transition: .4s;
+  background-color: #3d30a2;
+  color: #fff;
+  font-weight: 700;
+}
+/*--------------------Main(imagem inicial com sogan)-------------------------*/
+
+/*-----------------------------PATO------------------------------------------*/
+
+article div img{
+  width: 100vw;
+  height: 80vh;
+}
+
+/*-----------------------------PATO------------------------------------------*/
+
+
+
+/*-----------------------------------footer---------------------------------*/
+
+footer{
+  background-image: url(ondas-removebg-preview.png);
+  background-color: #3d30a2;
+  background-size: 100vw;
+  background-position: 0% 5vh;
+  padding: 0% 3.5vw;
+  display: flex;
+  background-repeat: no-repeat;
+  height: 75vh;
+  width: 100vw;
+  bottom: 0;
+  z-index: -10;
+}
+
+.contatos{
+display: flex;
+}
+
+.img1{
+width: 300px;
+height: 200px;
+margin-left: 15%;
+}
+
+
+.info2{
+  font-family: sans-serif;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-right: 7vw;
+  margin-bottom: -1vh;
+}
+
+.info2 img{
+  width: 1.7vw;
+  height: 3.2vh;
+  margin: 1vh 1vw 1vh 0vw;
+  filter: grayscale(100%);
+  transition: .4s;
+}
+.info2 img:hover{
+  transform: scale(1.2, 1.2);
+  transition: .4s;
+  filter: none;
+}
+
+.informacoes{
+  font-family: sans-serif;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-bottom: 1.5vh;
+  margin-right: 3vw;
+}
+
+.nos-fotter{
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.nos{
+  width: 110%;
+  height: 80%;
+}
+
+/*-----------------------------------footer---------------------------------*/
+
+body{
+  margin: 0%;
+  padding: 0%;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+  overflow: break-word;
+  overflow-x: hidden;
+}
+
+img{
+  height: 30%;
+  border-radius: 5%;
+  
+}
+
+h1, h2{
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: Fonte;
+}
+
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 25px;
+  animation: pauta 5s ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0 cover 40%;
+  display: flex;
+}
+.container img{
+  margin-right: 5%;
+}
+
+section.modulo p{
+  margin-bottom: 30px;
+  font-size: 1.3em;
+  font-family: 'Cuprum', sans-serif;
+  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+section.modulo h2{
+  margin-bottom: 30px;
+  font-size: 30px;
+  letter-spacing: .3em;
+  text-align: center;
+}
+
+section.modulo.content{
+  padding: 40px 0;
+  background: #3d30a2;
+}
+
+section.modulo.parallax{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100vh !important;
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+  color: #4b409e;
+  text-shadow: 7px 7px 7px #C08261;
+  text-align: center;
+  font-size: 75px;
+  z-index: 10;
+  font-family: f1;
+
+
+}
+
+section.modulo.parallax::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0) 30%, #000 100% );
+}
+
+
+
+
+section.modulo.parallax-1{
+  background-image: url("fotos/parallax1.jfif");
+}
+
+
+section.modulo.parallax-2{
+  background-image: url("fotos/parallax3.jfif");
+}
+
+section.modulo.parallax-3{
+  background-image: url("fotos/parallax3.jfif");
+}
+
+section.modulo.parallax-4{
+  background-image: url("fotos/parallax3.jfif");
+}
+
+section.modulo.parallax-5{
+  background-image: url("fotos/parallax3.jfif");
+}
+
+section.modulo.parallax-6{
+  background-image: url("fotos/parallax3.jfif");
+}
+
+section.modulo.parallax-7{
+  background-image: url("fotos/parallax3.jfif");
+}
